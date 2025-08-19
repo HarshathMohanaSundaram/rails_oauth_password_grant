@@ -21,6 +21,11 @@ Doorkeeper.configure do
     refresh_token
   ]
 
+  use_refresh_token
+
+
+  default_scopes :public
+  optional_scopes :write, :update, :offline_access
 
   # If you didn't skip applications controller from Doorkeeper routes in your application routes.rb
   # file then you need to declare this block in order to restrict access to the web interface for
